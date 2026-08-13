@@ -13,7 +13,7 @@ Router-on-a-Stick.
 - VLAN 10 is used on two separate floors
 - VLANs 20 and 30 for other network segments
 
-![Topology](httppology.png)
+![Topology](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-01-Router-on-a-Stick/Router-on-a-Stick-Topology.png.png)
 
 ### Configuration
 
