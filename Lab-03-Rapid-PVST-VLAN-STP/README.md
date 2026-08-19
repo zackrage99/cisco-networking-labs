@@ -134,6 +134,7 @@ spanning-tree vlan 30 root primary
 
 ---
 
+![rapid-pvst](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-03-Rapid-PVST-VLAN-STP/Rapid-PVST-VLAN-STP.png)
 # STP Port-Role Selection
 
 The **Root Bridge** is elected first using the lowest Bridge ID (BID), which consists of the bridge priority and MAC address.
