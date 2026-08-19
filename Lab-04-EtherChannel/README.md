@@ -4,6 +4,8 @@
 
 This lab demonstrates the configuration of **EtherChannel** between a Layer 2 switch and a Layer 3 switch to increase link capacity and provide redundancy by bundling multiple physical interfaces into a single logical **Port-Channel**.
 
+![EtherChannel](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-04-EtherChannel/EtherChannel.png)
+
 ### Configuration
 
 * Created the required VLANs on both switches.
