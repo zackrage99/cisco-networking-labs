@@ -7,6 +7,7 @@ Each area contains **4 routers running RIP** as the internal routing protocol. T
 For the inter-area connection, I used **single-mode fiber (SMF)** with the **HWIC-1GE-SFP module** and **GLC-LH-SMD transceiver** in Cisco Packet Tracer.
 
 All IP addresses, interfaces, routing protocols, and connections are clearly labeled in the topology.
+![lab-topology](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-05-RIP-EIGRP-Route-Redistribution/RIP-EIGRP-Route-Redistribution-topology.png)
 
 ## Network Design
 
@@ -93,6 +94,8 @@ Routes marked with:
 ```text
 D EX
 ```
+
+![routing-table](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-05-RIP-EIGRP-Route-Redistribution/RIP-EIGRP-Route-Redistribution-route.png)
 
 represent **EIGRP external routes**.
 
