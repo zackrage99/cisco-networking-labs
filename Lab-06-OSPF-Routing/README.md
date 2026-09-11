@@ -2,9 +2,9 @@
 
 ## Overview
 
-This lab demonstrates the configuration of OSPF (Open Shortest Path First) across a multi-router network using Cisco Packet Tracer.
+This lab demonstrates the configuration and operation of OSPF (Open Shortest Path First) across a multi-router network using Cisco Packet Tracer.
 
-OSPF was configured on the routers to dynamically advertise the connected networks and establish routing between the different parts of the topology.
+OSPF was configured to dynamically exchange routing information between the routers. An ISP router was also simulated to demonstrate how a default route can be originated and propagated through the OSPF network.
 
 ## Lab Topology
 
@@ -12,22 +12,22 @@ The following topology was built in Cisco Packet Tracer.
 
 <!-- Insert topology screenshot here -->
 
-![OSPF Lab Topology](images/ospf-topology.png)
+![OSPF Lab Topology](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-06-OSPF-Routing/OSPF-Routing-topolgy.png)
 
-## Configuration
+## OSPF Configuration
 
-The routers were configured with OSPF and assigned to the appropriate OSPF area.
+The routers were configured with OSPF to dynamically advertise their connected networks and establish neighbor relationships.
 
 The configuration included:
 
 * Enabling OSPF routing
 * Configuring OSPF router IDs
 * Advertising the required networks
-* Using wildcard masks to match the appropriate interfaces
+* Using wildcard masks
 * Establishing OSPF neighbor relationships
-* Allowing routers to dynamically learn remote networks
+* Dynamically learning remote networks
 
-Example OSPF configuration:
+Example:
 
 ```text
 router ospf 1
@@ -35,9 +35,28 @@ router ospf 1
  network X.X.X.X X.X.X.X area 0
 ```
 
+## ISP Simulation & Default Route
+
+**R5** was configured as the ISP router to simulate an external network.
+
+A static default route was configured on **R1** pointing toward R5:
+
+```text
+ip route 0.0.0.0 0.0.0.0 10.0.11.2
+```
+
+The default route was then originated into OSPF from R1 using:
+
+```text
+router ospf 1
+ default-information originate
+```
+
+This allows R1 to advertise the default route to the other OSPF routers, providing them with a route toward the simulated ISP.
+
 ## OSPF Verification
 
-OSPF neighbor relationships and routing information were verified using Cisco IOS commands such as:
+OSPF operation was verified using:
 
 ```text
 show ip ospf neighbor
@@ -45,6 +64,8 @@ show ip ospf interface
 show ip route ospf
 show ip protocols
 ```
+
+The routing tables were checked to confirm that OSPF routes and the default route were being learned correctly.
 
 ## Connectivity Testing
 
@@ -56,7 +77,7 @@ The first ping successfully reached the destination through the OSPF-routed netw
 
 <!-- Insert first ping screenshot here -->
 
-![OSPF Ping Test 1](images/ospf-ping-1.png)
+![OSPF Ping Test 1](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-06-OSPF-Routing/Lab-06-OSPF-Routing-ping1.png)
 
 ### Ping Test 2
 
@@ -64,27 +85,32 @@ A second ping was performed between another source and destination to further ve
 
 <!-- Insert second ping screenshot here -->
 
-![OSPF Ping Test 2](images/ospf-ping-2.png)
+![OSPF Ping Test 2](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-06-OSPF-Routing/OSPF-Routing-ping2.png)
 
 ## Result
 
-The OSPF configuration was successful.
+The lab was successfully completed.
 
 * OSPF neighbor adjacencies were established.
-* Routes were exchanged dynamically between routers.
-* Remote networks were successfully learned through OSPF.
-* ICMP packets successfully reached their destinations.
-* End-to-end connectivity was verified in Simulation Mode.
+* OSPF routes were exchanged dynamically.
+* R5 was used to simulate an ISP.
+* R1 was configured with a static default route toward R5.
+* R1 originated the default route into OSPF using `default-information originate`.
+* Other OSPF routers were able to learn the default route.
+* End-to-end connectivity was verified using successful ICMP pings in Simulation Mode.
 
 ## Key Concepts Practiced
 
 * OSPF
-* Dynamic routing
-* OSPF areas
+* OSPF neighbor adjacency
 * Router IDs
 * Wildcard masks
-* OSPF neighbor adjacency
+* Dynamic routing
+* Default routes
+* Static routes
+* `default-information originate`
+* ISP simulation
 * OSPF route advertisement
-* OSPF route verification
-* ICMP troubleshooting
+* Routing table verification
+* ICMP connectivity testing
 * Cisco Packet Tracer Simulation Mode
