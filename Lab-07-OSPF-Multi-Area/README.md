@@ -1,117 +1,76 @@
-# OSPF Multi-Area Network Topology & Routing Lab
+# Lab 07 — OSPF Multi-Area Routing
 
-Cisco Packet Tracer lab implementing a **multi-area OSPF network** with four core routers, five OSPF areas, departmental LANs, and an external ISP connection.
+This lab demonstrates a **multi-area OSPF network** in Cisco Packet Tracer, using four backbone routers and five OSPF areas.
 
-## Network Overview
+## Network Topology
 
-The topology uses **Area 0 as the OSPF backbone**, connecting four departmental areas through Area Border Routers (ABRs).
+The network consists of:
 
-* **Area 0:** Backbone / Core
-* **Area 1:** Sales — `192.168.1.0/24`
-* **Area 2:** Engineering — `192.168.2.0/24`
-* **Area 3:** Management — `192.168.3.0/24`
-* **Area 4:** Services — `192.168.4.0/24`
+* **4 backbone routers:** R5, R6, R7, R8
+* **5 OSPF areas:** Area 0, Area 1, Area 2, Area 3, Area 4
+* Multiple departmental LANs
+* Area Border Routers (ABRs)
+* An external ISP connection through R9
 
-The core consists of **R5, R6, R7, and R8**, with R5 also providing the connection to the external ISP router **R9**.
+### Topology
 
-## Topology
+![Network Topology](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-07-OSPF-Multi-Area/topology.png)
 
-![OSPF Multi-Area Topology](screenshots/topology.png)
+## OSPF Area Design
 
-### Main Router Links
+| Area   | Network / Department |
+| ------ | -------------------- |
+| Area 0 | OSPF Backbone        |
+| Area 1 | Sales                |
+| Area 2 | Engineering          |
+| Area 3 | Management           |
+| Area 4 | Services             |
 
-| Network        | Purpose            |
-| -------------- | ------------------ |
-| `10.0.6.0/30`  | Core link          |
-| `10.0.7.0/30`  | Core link          |
-| `10.0.8.0/30`  | Core link          |
-| `10.0.9.0/30`  | Core link          |
-| `10.0.2.0/30`  | Sales uplink       |
-| `10.0.3.0/30`  | Engineering uplink |
-| `10.0.4.0/30`  | Management uplink  |
-| `10.0.5.0/30`  | Services uplink    |
-| `10.0.10.0/30` | ISP connection     |
+The backbone routers provide connectivity between the different OSPF areas through the ABRs.
 
-## OSPF Configuration
-
-OSPF is configured across all five areas, with ABRs connecting the departmental areas to Area 0.
-
-Example ABR configuration:
-
-```cisco
-router ospf 1
- network 10.0.8.0 0.0.0.3 area 0
- network 10.0.9.0 0.0.0.3 area 0
- network 10.0.4.0 0.0.0.3 area 3
-```
-
-### Default Route
-
-R5 acts as the edge router toward the ISP.
-
-```cisco
-ip route 0.0.0.0 0.0.0.0 10.0.10.2
-
-router ospf 1
- default-information originate
-```
-
-This advertises the default route through OSPF so internal networks can reach external destinations through R5.
-
-## Verification
-
-The following commands were used to verify the OSPF operation:
+## OSPF Verification
 
 ### OSPF Neighbors
+
+The OSPF neighbor table was checked on a backbone router to verify that OSPF adjacencies were successfully established.
 
 ```cisco
 show ip ospf neighbor
 ```
 
-![OSPF Neighbors](screenshots/ospf-neighbors.png)
+![OSPF Neighbors](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-07-OSPF-Multi-Area/ospf-neighbors.png)
 
 ### OSPF Interfaces
+
+OSPF-enabled interfaces and their associated areas were verified using:
 
 ```cisco
 show ip ospf interface brief
 ```
 
-![OSPF Interfaces](screenshots/ospf-interfaces.png)
+![OSPF Interface Brief](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-07-OSPF-Multi-Area/ospf-interface-brief.png)
 
-### OSPF Routes
+### ABR Verification
+
+The backbone router connecting Area 0 to another OSPF area was verified as an **Area Border Router (ABR)**.
 
 ```cisco
-show ip route ospf
+show ip protocols
 ```
 
-![OSPF Routes](screenshots/ospf-routes.png)
+![ABR Verification](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-07-OSPF-Multi-Area/ospf-abr.png)
 
-Inter-area routes are identified by **`O IA`** in the routing table.
-
-### End-to-End Connectivity
-
-A connectivity test was performed between hosts in different OSPF areas.
-
-**PC4 (Area 3) → PC1 (Area 1)**
-
-```text
-ping 192.168.1.10
-```
-
-![Successful Inter-Area Ping](screenshots/inter-area-ping.png)
-
-## Skills Demonstrated
+## Key Concepts Demonstrated
 
 * Multi-area OSPF
-* OSPF Area 0 / Backbone
+* OSPF Area 0 backbone
 * Area Border Routers (ABRs)
+* OSPF neighbor adjacencies
 * Inter-area routing
-* Default-route propagation
 * IPv4 subnetting
 * Point-to-point router links
-* OSPF troubleshooting and verification
-* End-to-end connectivity testing
+* OSPF verification and troubleshooting
 
-## Packet Tracer File
+## Lab File
 
-The complete topology and configurations are included in the `.pkt` file.
+The complete Cisco Packet Tracer topology and configuration are included in the `.pkt` file.
