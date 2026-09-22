@@ -163,16 +163,3 @@ The HSRP configuration provides gateway redundancy:
 3. If Router 1 fails, Router 2 can take over the Active role.
 4. Hosts continue using the same HSRP virtual IP as their default gateway.
 
-## Key Concepts Practiced
-
-* Router-on-a-Stick
-* 802.1Q trunking
-* Inter-VLAN Routing
-* HSRP Version 2
-* HSRP Active/Standby roles
-* HSRP priority and preemption
-* Default Gateway Redundancy
-* VLAN verification
-* Trunk verification
-* Packet Tracer Simulation Mode
-* HSRP failover
