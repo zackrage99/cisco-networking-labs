@@ -15,7 +15,7 @@ The topology uses two routers and multiple switches. Both routers provide routin
 
 ### Topology
 
-![HSRP Topology](Lab-08-HSRP-Topology.png)
+![HSRP Topology](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-08-Router-on-a-Stick-HSRP/HSRP-Topology.png)
 
 ## IP Addressing
 
@@ -95,7 +95,7 @@ interface <interface-id>
 
 The VLAN configuration was verified using `show vlan brief`.
 
-![Switch VLAN Brief](Lab-08-Switch-Show-VLAN-Brief.png)
+![Switch VLAN Brief](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-08-Router-on-a-Stick-HSRP/Switch-Show-VLAN-Brief.png)
 
 ## HSRP Verification
 
@@ -103,19 +103,19 @@ The VLAN configuration was verified using `show vlan brief`.
 
 The `show standby` command confirms the HSRP configuration. Router 1 has a priority of **200** and is the local Active router.
 
-![R1 Show Standby](Lab-08-R1-Show-Standby.png)
+![R1 Show Standby](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-08-Router-on-a-Stick-HSRP/R1-Show-Standby-Brief.png)
 
 ### Router 1 — HSRP Brief
 
 Router 1 is shown as the **Active** router for the configured HSRP groups.
 
-![R1 Show Standby Brief](Lab-08-R1-Show-Standby-Brief.png)
+![R1 Show Standby Brief](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-08-Router-on-a-Stick-HSRP/R1-Show-Standby-Brief.png)
 
 ### Router 2 — HSRP Brief
 
 Router 2 is shown as the **Standby** router for the configured HSRP groups.
 
-![R2 Show Standby Brief](Lab-08-R2-Show-Standby-Brief.png)
+![R2 Show Standby Brief](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-08-Router-on-a-Stick-HSRP/R2-Show-Standby-Brief.png)
 
 ## Connectivity Testing
 
@@ -123,11 +123,11 @@ Connectivity between the VLANs was tested using Cisco Packet Tracer **Simulation
 
 ### Ping — Sent
 
-![Ping Simulation Send](Lab-08-Ping-Simulation-Send.png)
+![Ping Simulation Send](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-08-Router-on-a-Stick-HSRP/Ping-Simulation-Send.png)
 
 ### Ping — Received
 
-![Ping Simulation Receive](Lab-08-Ping-Simulation-Receive.png)
+![Ping Simulation Receive](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-08-Router-on-a-Stick-HSRP/Ping-Simulation-Receive.png)
 
 The successful packet flow demonstrates communication between the VLANs through the HSRP virtual gateway and Router-on-a-Stick configuration.
 
