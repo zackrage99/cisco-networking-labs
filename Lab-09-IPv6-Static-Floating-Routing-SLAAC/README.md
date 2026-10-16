@@ -13,7 +13,7 @@ Both PCs obtain their IPv6 addresses automatically using SLAAC.
 
 ## Network Topology
 
-![IPv6 Network Topology](screenshots/ipv6-topology.png)
+![IPv6 Network Topology](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-09-IPv6-Static-Floating-Routing-SLAAC/IPv6-Topology.png)
 
 ### IPv6 Addressing
 
@@ -82,7 +82,7 @@ A ping test from PC2 to PC3 verifies connectivity through the primary path:
 
 **PC2 → R2 → R4 → R3 → PC3**
 
-![Ping Test - Default Static Route](screenshots/default-static-route-ping.png)
+![Ping Test - Default Static Route](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-09-IPv6-Static-Floating-Routing-SLAAC/Default-Static-Route-Ping.png)
 
 ### Floating Static Route — AD 10
 
@@ -92,7 +92,7 @@ Traffic used the alternative path:
 
 **PC2 → R2 → R5 → R3 → PC3**
 
-![Ping Test - Floating Static Route](screenshots/floating-static-route-ping.png)
+![Ping Test - Floating Static Route](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-09-IPv6-Static-Floating-Routing-SLAAC/Floating-Static-Route-Ping.png)
 
 This test demonstrates backup connectivity when the primary path is unavailable.
 
