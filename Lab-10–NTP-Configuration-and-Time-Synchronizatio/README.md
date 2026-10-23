@@ -12,7 +12,7 @@ This lab demonstrates NTP configuration and time synchronization in a three-rout
 
 ## Topology
 
-![NTP Topology](NTP-Topology.png)
+![NTP Topology](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-10%E2%80%93NTP-Configuration-and-Time-Synchronizatio/NTP-Topology.png)
 
 **Devices:** R1, R2, R3  
 **Routing Protocol:** OSPF  
@@ -41,7 +41,7 @@ ntp server 10.0.1.1
 
 ### 1. Network Topology
 
-![NTP Topology](NTP-Topology.png)
+![NTP Topology](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-10%E2%80%93NTP-Configuration-and-Time-Synchronizatio/NTP-Topology.png)
 
 ### 2. R1 – NTP Associations
 
@@ -49,7 +49,7 @@ ntp server 10.0.1.1
 show ntp associations
 ```
 
-![R1 NTP Associations](R1-NTP-Associations.png)
+![R1 NTP Associations](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-10%E2%80%93NTP-Configuration-and-Time-Synchronizatio/R1-NTP-Associations.png)
 
 ### 3. R3 – NTP Status
 
@@ -65,7 +65,7 @@ show ntp status
 show ntp associations
 ```
 
-![R3 NTP Associations](R3-NTP-Associations.png)
+![R3 NTP Associations](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-10%E2%80%93NTP-Configuration-and-Time-Synchronizatio/R3-NTP-Associations.png)
 
 ## Key Takeaways
 - NTP synchronizes clocks between network devices.
