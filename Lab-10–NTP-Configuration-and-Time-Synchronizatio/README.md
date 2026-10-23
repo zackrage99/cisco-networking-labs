@@ -75,8 +75,3 @@ show ntp associations
 - `show ntp associations` displays NTP association information.
 - `show ntp status` displays the router's synchronization state and stratum.
 
-## Technologies
-- Cisco Packet Tracer
-- Cisco IOS
-- OSPF
-- NTP
