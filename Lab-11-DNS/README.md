@@ -46,5 +46,5 @@ ping pc3
 
 The ping succeeded, demonstrating that DNS resolved `pc3` to `192.168.1.2` and that OSPF provided the necessary network connectivity.
 
-![DNS Name Resolution Ping Test](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-11-DNS/DNS-Name-Resolution-with-OSPF-Routing.pkt)
+![DNS Name Resolution Ping Test](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-11-DNS/DNS-Name-Resolution-Ping-Test.png)
 
