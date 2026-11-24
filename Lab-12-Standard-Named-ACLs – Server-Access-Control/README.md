@@ -10,7 +10,7 @@ The ACLs are configured on Router1 and applied outbound on the interfaces connec
 
 ## Network Topology
 
-![Network Topology](screenshots/01-topology.png)
+![Network Topology](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-12-Standard-Named-ACLs%20%E2%80%93%20Server-Access-Control/topology.png)
 
 ### IP Addressing
 
@@ -67,19 +67,19 @@ The following connectivity tests were performed to verify the ACL configurations
 
 Displays the configured named ACLs and their rules.
 
-![ACL Configuration](screenshots/02-router1-show-access-lists.png)
+![ACL Configuration](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-12-Standard-Named-ACLs%20%E2%80%93%20Server-Access-Control/router1-show-access-lists.png)
 
 **2. PC1 – Access to Server2 Denied**
 
-![PC1 to Server2](screenshots/03-pc1-to-server2-denied.png)
+![PC1 to Server2](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-12-Standard-Named-ACLs%20%E2%80%93%20Server-Access-Control/pc1-to-server2-denied.png)
 
 **3. PC3 – Access to Server1 Denied**
 
-![PC3 to Server1](screenshots/04-pc3-to-server1-denied.png)
+![PC3 to Server1](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-12-Standard-Named-ACLs%20%E2%80%93%20Server-Access-Control/pc3-to-server1-denied.png)
 
 **4. PC4 – Access to Server1 Allowed**
 
-![PC4 to Server1](screenshots/05-pc4-to-server1-allowed.png)
+![PC4 to Server1](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-12-Standard-Named-ACLs%20%E2%80%93%20Server-Access-Control/pc4-to-server1-allowed.png)
 
 ## Key Concepts Practiced
 
