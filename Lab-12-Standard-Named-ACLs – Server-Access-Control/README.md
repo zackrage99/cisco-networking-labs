@@ -92,11 +92,7 @@ Displays the configured named ACLs and their rules.
 - Network traffic filtering and verification.
 - OSPF routing between multiple networks.
 
-## Project Files
 
-- `access.pkt` – Cisco Packet Tracer project.
-- `README.md` – Lab documentation.
-- `screenshots/` – Network topology, ACL configuration, and connectivity verification screenshots.
 
 ## Important Notes
 
@@ -104,4 +100,4 @@ Standard ACLs filter traffic based on the source IPv4 address only.
 
 Applying the ACLs outbound on the server-facing interfaces allows traffic to be filtered before reaching the respective server networks.
 
-Any traffic that does not match an explicit permit statement is denied by the implicit `deny any` rule at the end of every ACL.
+Added permit any command at the end of each rule for any other traffic to go through
