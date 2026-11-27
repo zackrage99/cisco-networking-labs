@@ -10,7 +10,7 @@ The routers are configured with OSPF to provide end-to-end connectivity between 
 
 ## 2. Network Topology
 
-![Network Topology](Screenshots/Topology.png)
+![Network Topology](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-14-SSH-Telnet/Topology.png)
 
 ### IP Addressing
 
@@ -114,7 +114,7 @@ line vty 0 15
 ### Telnet Connection Test
 
 From PC1, I opened Command Prompt and established a Telnet connection to Switch2 using its management IP address.
-
+![Telnet connection](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-14-SSH-Telnet/Telnet-Connection.png)
 ```text
 telnet 192.168.1.253
 ```
@@ -124,6 +124,7 @@ I successfully authenticated using the configured local username and password an
 ## 7. SSH Connection and Testing
 
 From PC1, I opened Command Prompt and established an SSH connection to Switch2.
+![ssh connection](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-14-SSH-Telnet/SSH-Connection.png)
 
 ```text
 ssh -l zack 192.168.1.253
@@ -136,7 +137,7 @@ Unlike Telnet, SSH encrypts the communication between the client and the switch.
 ## 8. Verification Commands
 
 The following commands were used to verify the switch configuration and remote connections.
-
+![show shh](https://github.com/zackrage99/cisco-networking-labs/blob/main/Lab-14-SSH-Telnet/SSH-Verification.png)
 ```cisco
 show ip interface brief
 show running-config
@@ -158,25 +159,4 @@ show ssh
 | `SSH-Connection.png` | Successful SSH connection from PC1 to Switch2 |
 | `SSH-Verification.png` | SSH session verification using `show ssh` on Switch2 |
 
-## 10. Skills Practiced
 
-- Cisco IOS switch configuration
-- Switch management using SVI
-- Default gateway configuration
-- Privileged EXEC password protection
-- Local user authentication
-- SSH configuration and RSA key generation
-- Telnet remote access
-- VTY line configuration
-- Session timeout configuration
-- OSPF-based network connectivity
-- Remote management troubleshooting
-
-## 11. Lab Environment
-
-- **Software:** Cisco Packet Tracer
-- **Device:** Cisco Layer 2 Switch
-- **Routing Protocol:** OSPF
-- **Remote Access Protocols:** Telnet and SSH
-- **SSH Version:** SSHv2
-- **RSA Key Size:** 2048 bits
